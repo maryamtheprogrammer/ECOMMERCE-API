@@ -81,3 +81,15 @@ select{
     text-align: center;
     margin: 20px;
 }
+
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-left: 40%;
+}
+
+.loader img{
+    height: 500px;
+}

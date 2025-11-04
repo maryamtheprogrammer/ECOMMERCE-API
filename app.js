@@ -1,11 +1,14 @@
 let box = document.getElementById("main");
 let categoriesSelect = document.getElementById("categories");
 let card = document.querySelector('.card');
+let loading = document.querySelector('.loader');
 let allData = [];
 
 async function apiRender() {
+  loading.style.display = 'block';
   let api = await fetch("https://fakestoreapi.com/products");
   let data = await api.json();
+  loading.style.display = 'none';
   allData = data;
   renderProducts(data);
   category(data);
